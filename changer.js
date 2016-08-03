@@ -7,10 +7,20 @@
 (function() {
     "use strict";
 
+    /*
+     * Destination of all links on the page
+     */
     var DESTINATION = "about:blank";
 
+    /*
+     * Change all keywords into links
+     */
     var KEYWORD = "Kate";
     var KEYWORD_DESTINATION = "https://www.yahoo.com";
+
+
+    /////////////////////////////////////////////////////////////////
+
 
     // Replace all existing links
     var elems = document.querySelectorAll("a");
@@ -19,7 +29,9 @@
     }
 
     // Replace all keyword occurrences with keyword link
-
-    //console.log(document.getElementsByTagName("body")[0].textContent);
+    var body = document.body;
+    var re = new RegExp(KEYWORD, "g");
+    body.innerHTML = body.innerHTML.replace(re, 
+        "<a href='" + KEYWORD_DESTINATION + "'>" + KEYWORD + "</a>");
 
 })();
