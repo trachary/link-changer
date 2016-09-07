@@ -15,7 +15,7 @@
     /*
      * Change all keywords into links
      */
-    var KEYWORD = "Kate";
+    var KEYWORD = "alice bob";
     var KEYWORD_DESTINATION = "https://www.yahoo.com";
 
 
